@@ -1,7 +1,7 @@
 package org.demo;
 import org.demo.Person;
 
-rule "set as adult" ruleflow group "personrules"
+rule "set as adult" ruleflow-group "personrules"
 no-loop
 when
 	$p:Person(age>=18)
@@ -11,7 +11,7 @@ then
 	}
 end
 
-rule "set as teenager" ruleflow group "personrules"
+rule "set as teenager" ruleflow-group "personrules"
 no-loop
 when
 	$p:Person(age<18)
