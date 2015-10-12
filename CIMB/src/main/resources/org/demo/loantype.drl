@@ -6,10 +6,10 @@ when
 	$p:LoanType(newloan==true)
 then
 	modify($p){
-				setNewloan(true);
+				setNewloan(true)
 }
 end
-rule "set as existngloan" ruleflow-group "loantype"
+rule "set as existingloan" ruleflow-group "loantype"
 no-loop
 when
 	$p:LoanType(existingloan==true)
