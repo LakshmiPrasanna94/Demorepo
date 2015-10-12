@@ -3,7 +3,27 @@ import org.demo.LoanType;
 rule "set as loan" ruleflow-group "loantype"
 no-loop
 when
+	$p:LoanType(Existingloan==true)
+then
+	modify($p){
+				setnewloan(true);
+			}
+end
+rule "set as loan" ruleflow-group "loantype"
+no-loop
+when
 	$p:LoanType(newloan==true)
 then
-	System.out.println("Checked");
+	modify($p){
+				setExistingloan(true);
+			}
+end
+rule "set as loan" ruleflow-group "loantype"
+no-loop
+when
+	$p:LoanType(other==true)
+then
+	modify($p){
+				setother(true);
+			}
 end
