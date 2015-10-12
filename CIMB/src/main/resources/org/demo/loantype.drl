@@ -9,21 +9,4 @@ then
 				setNewloan(true);
 			}
 end
-rule "set as existingloan" ruleflow-group "loantype"
-no-loop
-when
-	$p:LoanType(existingloan==true)
-then
-	modify($p){
-				setExistingloan(true);
-			}
-end
-rule "set as other" ruleflow-group "loantype"
-no-loop
-when
-	$p:LoanType(other==true)
-then
-	modify($p){
-				setOther(true);
-			}
-end
+
