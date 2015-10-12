@@ -10,10 +10,12 @@ public class Customer implements java.io.Serializable
    static final long serialVersionUID = 1L;
 
    private java.lang.Integer custid;
+
    private java.lang.String custname;
+
    private java.lang.Integer age;
+
    private java.lang.String address;
-   private boolean gender;
 
    public Customer()
    {
@@ -59,24 +61,13 @@ public class Customer implements java.io.Serializable
       this.address = address;
    }
 
-   public boolean isGender()
-   {
-      return this.gender;
-   }
-
-   public void setGender(boolean gender)
-   {
-      this.gender = gender;
-   }
-
    public Customer(java.lang.Integer custid, java.lang.String custname,
-         java.lang.Integer age, java.lang.String address, boolean gender)
+         java.lang.Integer age, java.lang.String address)
    {
       this.custid = custid;
       this.custname = custname;
       this.age = age;
       this.address = address;
-      this.gender = gender;
    }
 
 }
