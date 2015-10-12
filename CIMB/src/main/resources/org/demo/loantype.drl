@@ -3,7 +3,7 @@ import org.demo.LoanType;
 rule "set as newloan" ruleflow-group "loantype"
 no-loop
 when
-	$p:LoanType(Existingloan==true)
+	$p:LoanType(newloan==true)
 then
 	modify($p){
 				setnewloan(true);
@@ -12,7 +12,7 @@ end
 rule "set as Existingloan" ruleflow-group "loantype"
 no-loop
 when
-	$p:LoanType(newloan==true)
+	$p:LoanType(Existngloan==true)
 then
 	modify($p){
 				setExistingloan(true);
