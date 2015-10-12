@@ -6,7 +6,7 @@ when
 	$p:LoanType(newloan==true)
 then
 	modify($p){
-				setnewloan(true);
+				setNewloan(true);
 			}
 end
 rule "set as Existingloan" ruleflow-group "loantype"
@@ -24,6 +24,6 @@ when
 	$p:LoanType(other==true)
 then
 	modify($p){
-				setother(true);
+				setOther(true);
 			}
 end
