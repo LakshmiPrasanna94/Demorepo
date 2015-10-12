@@ -5,6 +5,29 @@ no-loop
 when
 	$p:LoanType(newloan==true)
 then
-	System.out.println("checked");
+	modify($p){
+				setNewloan(true);
+}
 end
+rule "set as existngloan" ruleflow-group "loantype"
+no-loop
+when
+	$p:LoanType(existingloan==true)
+then
+	modify($p){
+				setExistingloan(true);
+}
+end
+rule "set as other" ruleflow-group "loantype"
+no-loop
+when
+	$p:LoanType(other==true)
+then
+	modify($p){
+				setOther(true);
+}
+end
+
+
+
 
