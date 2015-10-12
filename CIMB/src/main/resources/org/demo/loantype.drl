@@ -9,10 +9,10 @@ then
 				setNewloan(true);
 			}
 end
-rule "set as Existingloan" ruleflow-group "loantype"
+rule "set as existingloan" ruleflow-group "loantype"
 no-loop
 when
-	$p:LoanType(Existingloan==true)
+	$p:LoanType(existingloan==true)
 then
 	modify($p){
 				setExistingloan(true);
