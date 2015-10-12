@@ -1,2 +1,11 @@
 package org.demo;
 
+import org.demo.Newloan;
+rule "set as corporate" ruleflow-group "corporate"
+no-loop
+when
+	$p:Newloan(corporate==true)
+then
+
+end
+
