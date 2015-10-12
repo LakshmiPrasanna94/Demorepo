@@ -1,6 +1,6 @@
 package org.demo;
 import org.demo.LoanType;
-rule "set as loan" ruleflow-group "loantype"
+rule "set as newloan" ruleflow-group "loantype"
 no-loop
 when
 	$p:LoanType(Existingloan==true)
@@ -9,7 +9,7 @@ then
 				setnewloan(true);
 			}
 end
-rule "set as loan" ruleflow-group "loantype"
+rule "set as Existingloan" ruleflow-group "loantype"
 no-loop
 when
 	$p:LoanType(newloan==true)
@@ -18,7 +18,7 @@ then
 				setExistingloan(true);
 			}
 end
-rule "set as loan" ruleflow-group "loantype"
+rule "set as other" ruleflow-group "loantype"
 no-loop
 when
 	$p:LoanType(other==true)
