@@ -1,2 +1,38 @@
 package org.demo;
-
+import org.demo.Buttons;
+rule "set as approve" rulefliow-group "taskrule"
+no-loop
+when
+	$p:Buttons(approve==true)
+then
+	modify($p){
+				setApprove(true)
+}
+end
+rule "set as reject" rulefliow-group "taskrule"
+no-loop
+when
+	$p:Buttons(reject==true)
+then
+	modify($p){
+				setReject(true)
+}
+end
+rule "set as rework" rulefliow-group "taskrule"
+no-loop
+when
+	$p:Buttons(rework==true)
+then
+	modify($p){
+				setRework(true)
+}
+end
+rule "set as cancel" rulefliow-group "taskrule"
+no-loop
+when
+	$p:Buttons(cancel==true)
+then
+	modify($p){
+				setCancel(true)
+}
+end
