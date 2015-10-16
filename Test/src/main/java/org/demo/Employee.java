@@ -10,7 +10,7 @@ public class Employee implements java.io.Serializable
    static final long serialVersionUID = 1L;
 
    private java.lang.String name;
-   private java.lang.Integer id;
+   private java.lang.Integer salary;
 
    public Employee()
    {
@@ -26,20 +26,20 @@ public class Employee implements java.io.Serializable
       this.name = name;
    }
 
-   public java.lang.Integer getId()
+   public java.lang.Integer getSalary()
    {
-      return this.id;
+      return this.salary;
    }
 
-   public void setId(java.lang.Integer id)
+   public void setSalary(java.lang.Integer salary)
    {
-      this.id = id;
+      this.salary = salary;
    }
 
-   public Employee(java.lang.String name, java.lang.Integer id)
+   public Employee(java.lang.String name, java.lang.Integer salary)
    {
       this.name = name;
-      this.id = id;
+      this.salary = salary;
    }
 
 }
