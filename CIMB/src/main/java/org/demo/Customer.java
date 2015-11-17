@@ -9,19 +9,19 @@ public class Customer implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   public java.lang.Integer custid;
+   private java.lang.Integer custid;
 
-   public java.lang.String custname;
+   private java.lang.String custname;
 
-   public java.lang.Integer age;
+   private java.lang.Integer age;
 
-   public java.lang.String address;
+   private java.lang.String address;
 
-   public java.lang.Integer mnumber;
+   private java.lang.Integer mnumber;
 
-   public java.lang.Boolean female;
+   private java.lang.Boolean female;
 
-   public java.lang.Boolean male;
+   private java.lang.Boolean male;
 
    public Customer()
    {
