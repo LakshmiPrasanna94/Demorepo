@@ -33,6 +33,14 @@ public class Customer implements java.io.Serializable
 
    private java.lang.String remarks;
 
+   private java.lang.Boolean approve;
+
+   private boolean cancel;
+
+   private java.lang.Boolean rework;
+
+   private java.lang.Boolean reject;
+
    public Customer()
    {
    }
@@ -217,6 +225,46 @@ public class Customer implements java.io.Serializable
       this.remarks = remarks;
    }
 
+   public java.lang.Boolean getApprove()
+   {
+      return this.approve;
+   }
+
+   public void setApprove(java.lang.Boolean approve)
+   {
+      this.approve = approve;
+   }
+
+   public boolean isCancel()
+   {
+      return this.cancel;
+   }
+
+   public void setCancel(boolean cancel)
+   {
+      this.cancel = cancel;
+   }
+
+   public java.lang.Boolean getRework()
+   {
+      return this.rework;
+   }
+
+   public void setRework(java.lang.Boolean rework)
+   {
+      this.rework = rework;
+   }
+
+   public java.lang.Boolean getReject()
+   {
+      return this.reject;
+   }
+
+   public void setReject(java.lang.Boolean reject)
+   {
+      this.reject = reject;
+   }
+
    public Customer(java.lang.Integer id, java.lang.String name,
          java.lang.Integer age, java.lang.String address,
          java.lang.Integer mobilenum, java.lang.Boolean female,
@@ -225,7 +273,9 @@ public class Customer implements java.io.Serializable
          java.lang.Boolean personal, java.lang.Boolean strategic,
          java.lang.Boolean corporate, java.lang.Integer loanamount,
          java.lang.Integer durationofloan, java.lang.String reasonforloan,
-         java.lang.Integer interestrate, java.lang.String remarks)
+         java.lang.Integer interestrate, java.lang.String remarks,
+         java.lang.Boolean approve, boolean cancel, java.lang.Boolean rework,
+         java.lang.Boolean reject)
    {
       this.id = id;
       this.name = name;
@@ -245,6 +295,10 @@ public class Customer implements java.io.Serializable
       this.reasonforloan = reasonforloan;
       this.interestrate = interestrate;
       this.remarks = remarks;
+      this.approve = approve;
+      this.cancel = cancel;
+      this.rework = rework;
+      this.reject = reject;
    }
 
 }
