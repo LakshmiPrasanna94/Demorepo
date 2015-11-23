@@ -1,39 +1,39 @@
-package org.recruitment;
-import org.recruitment.Buttons;
-rule "set as approve" ruleflow-group "taskrule"
+package org.demo;
+import org.demo.Customer;
+rule "set as approve" ruleflow-group "Banker2Rule"
 no-loop
 when
-	 $b:Buttons(approve==true)
+	 $b:Customer(approve==true)
 then
 	modify($b){
 		setApprove(true);
 			}
  end
 
-rule "set as reject" ruleflow-group "taskrule"
+rule "set as reject" ruleflow-group "Banker2Rule"
 no-loop
 when
-	 $b:Buttons(reject==true)
+	 $b:Customer(reject==true)
 then
 	modify($b){
 		setReject(true);
 			}
  end
 
-rule "set as rework" ruleflow-group "taskrule"
+rule "set as rework" ruleflow-group "Banker2Rule"
 no-loop
 when
-	 $b:Buttons(rework==true)
+	 $b:Customer(rework==true)
 then
 	modify($b){
 		setRework(true);
 			}
  end
 
-rule "set as cancel" ruleflow-group "taskrule"
+rule "set as cancel" ruleflow-group "Banker2Rule"
 no-loop
 when
-	 $b:Buttons(cancel==true)
+	 $b:Customer(cancel==true)
 then
 	modify($b){
 		setCancel(true);
