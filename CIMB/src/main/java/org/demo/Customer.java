@@ -18,7 +18,6 @@ public class Customer implements java.io.Serializable
    private java.lang.Boolean male;
    private java.lang.Boolean newloan;
    private java.lang.Boolean existingloan;
-   private java.lang.Boolean other;
    private java.lang.Boolean personal;
    private java.lang.Boolean strategic;
    private java.lang.Boolean corporate;
@@ -40,6 +39,10 @@ public class Customer implements java.io.Serializable
    private java.lang.Boolean rework;
 
    private java.lang.Boolean reject;
+
+   private java.lang.Boolean other1;
+
+   private java.lang.Boolean other2;
 
    public Customer()
    {
@@ -133,16 +136,6 @@ public class Customer implements java.io.Serializable
    public void setExistingloan(java.lang.Boolean existingloan)
    {
       this.existingloan = existingloan;
-   }
-
-   public java.lang.Boolean getOther()
-   {
-      return this.other;
-   }
-
-   public void setOther(java.lang.Boolean other)
-   {
-      this.other = other;
    }
 
    public java.lang.Boolean getPersonal()
@@ -265,17 +258,37 @@ public class Customer implements java.io.Serializable
       this.reject = reject;
    }
 
+   public java.lang.Boolean getOther1()
+   {
+      return this.other1;
+   }
+
+   public void setOther1(java.lang.Boolean other1)
+   {
+      this.other1 = other1;
+   }
+
+   public java.lang.Boolean getOther2()
+   {
+      return this.other2;
+   }
+
+   public void setOther2(java.lang.Boolean other2)
+   {
+      this.other2 = other2;
+   }
+
    public Customer(java.lang.Integer id, java.lang.String name,
          java.lang.Integer age, java.lang.String address,
          java.lang.Integer mobilenum, java.lang.Boolean female,
          java.lang.Boolean male, java.lang.Boolean newloan,
-         java.lang.Boolean existingloan, java.lang.Boolean other,
-         java.lang.Boolean personal, java.lang.Boolean strategic,
-         java.lang.Boolean corporate, java.lang.Integer loanamount,
-         java.lang.Integer durationofloan, java.lang.String reasonforloan,
-         java.lang.Integer interestrate, java.lang.String remarks,
-         java.lang.Boolean approve, boolean cancel, java.lang.Boolean rework,
-         java.lang.Boolean reject)
+         java.lang.Boolean existingloan, java.lang.Boolean personal,
+         java.lang.Boolean strategic, java.lang.Boolean corporate,
+         java.lang.Integer loanamount, java.lang.Integer durationofloan,
+         java.lang.String reasonforloan, java.lang.Integer interestrate,
+         java.lang.String remarks, java.lang.Boolean approve, boolean cancel,
+         java.lang.Boolean rework, java.lang.Boolean reject,
+         java.lang.Boolean other1, java.lang.Boolean other2)
    {
       this.id = id;
       this.name = name;
@@ -286,7 +299,6 @@ public class Customer implements java.io.Serializable
       this.male = male;
       this.newloan = newloan;
       this.existingloan = existingloan;
-      this.other = other;
       this.personal = personal;
       this.strategic = strategic;
       this.corporate = corporate;
@@ -299,6 +311,8 @@ public class Customer implements java.io.Serializable
       this.cancel = cancel;
       this.rework = rework;
       this.reject = reject;
+      this.other1 = other1;
+      this.other2 = other2;
    }
 
 }
