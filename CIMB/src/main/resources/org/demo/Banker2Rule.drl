@@ -1,2 +1,41 @@
-package org.demo;
+package org.recruitment;
+import org.recruitment.Buttons;
+rule "set as approve" ruleflow-group "taskrule"
+no-loop
+when
+	 $b:Buttons(approve==true)
+then
+	modify($b){
+		setApprove(true);
+			}
+ end
 
+rule "set as reject" ruleflow-group "taskrule"
+no-loop
+when
+	 $b:Buttons(reject==true)
+then
+	modify($b){
+		setReject(true);
+			}
+ end
+
+rule "set as rework" ruleflow-group "taskrule"
+no-loop
+when
+	 $b:Buttons(rework==true)
+then
+	modify($b){
+		setRework(true);
+			}
+ end
+
+rule "set as cancel" ruleflow-group "taskrule"
+no-loop
+when
+	 $b:Buttons(cancel==true)
+then
+	modify($b){
+		setCancel(true);
+			}
+ end
