@@ -1,2 +1,31 @@
 package org.demo;
+import org.demo.Customer;
+rule "set as new loan" ruleflow-group "LoanTypeRule"
+no-loop
+when
+	 $p:Customer(newLoan==true)
+then
+	modify($p){
+		setNewLoan(true);
+			}
+ end
 
+rule "set as existing loan" ruleflow-group "LoanTypeRule"
+no-loop
+when
+	 $p:Customer(existingLoan==true)
+then
+	modify($p){
+		setExistingLoan(true);
+			}
+ end
+
+rule "set as other" ruleflow-group "LoanTypeRule"
+no-loop
+when
+	 $p:Customer(other==true)
+then
+	modify($p){
+		setOther(true);
+			}
+ end
