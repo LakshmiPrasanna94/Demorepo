@@ -1,6 +1,6 @@
 package org.demo;
 import org.demo.Customer;
-rule "set as new loan" ruleflow-group "LoanTypeRule"
+rule "set as personal" ruleflow-group "LoanTypeRule"
 no-loop
 when
 	 $p:Customer(personal==true)
@@ -10,7 +10,7 @@ then
 			}
  end
 
-rule "set as existing loan" ruleflow-group "LoanTypeRule"
+rule "set as strategic" ruleflow-group "LoanTypeRule"
 no-loop
 when
 	 $p:Customer(strategic==true)
@@ -20,7 +20,7 @@ then
 			}
  end
 
-rule "set as existing loan" ruleflow-group "LoanTypeRule"
+rule "set as corporate" ruleflow-group "LoanTypeRule"
 no-loop
 when
 	 $p:Customer(corporate==true)
