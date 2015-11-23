@@ -23,6 +23,16 @@ public class Customer implements java.io.Serializable
    private java.lang.Boolean strategic;
    private java.lang.Boolean corporate;
 
+   private java.lang.Integer loanamount;
+
+   private java.lang.Integer durationofloan;
+
+   private java.lang.String reasonforloan;
+
+   private java.lang.Integer interestrate;
+
+   private java.lang.String remarks;
+
    public Customer()
    {
    }
@@ -157,13 +167,65 @@ public class Customer implements java.io.Serializable
       this.corporate = corporate;
    }
 
+   public java.lang.Integer getLoanamount()
+   {
+      return this.loanamount;
+   }
+
+   public void setLoanamount(java.lang.Integer loanamount)
+   {
+      this.loanamount = loanamount;
+   }
+
+   public java.lang.Integer getDurationofloan()
+   {
+      return this.durationofloan;
+   }
+
+   public void setDurationofloan(java.lang.Integer durationofloan)
+   {
+      this.durationofloan = durationofloan;
+   }
+
+   public java.lang.String getReasonforloan()
+   {
+      return this.reasonforloan;
+   }
+
+   public void setReasonforloan(java.lang.String reasonforloan)
+   {
+      this.reasonforloan = reasonforloan;
+   }
+
+   public java.lang.Integer getInterestrate()
+   {
+      return this.interestrate;
+   }
+
+   public void setInterestrate(java.lang.Integer interestrate)
+   {
+      this.interestrate = interestrate;
+   }
+
+   public java.lang.String getRemarks()
+   {
+      return this.remarks;
+   }
+
+   public void setRemarks(java.lang.String remarks)
+   {
+      this.remarks = remarks;
+   }
+
    public Customer(java.lang.Integer id, java.lang.String name,
          java.lang.Integer age, java.lang.String address,
          java.lang.Integer mobilenum, java.lang.Boolean female,
          java.lang.Boolean male, java.lang.Boolean newloan,
          java.lang.Boolean existingloan, java.lang.Boolean other,
          java.lang.Boolean personal, java.lang.Boolean strategic,
-         java.lang.Boolean corporate)
+         java.lang.Boolean corporate, java.lang.Integer loanamount,
+         java.lang.Integer durationofloan, java.lang.String reasonforloan,
+         java.lang.Integer interestrate, java.lang.String remarks)
    {
       this.id = id;
       this.name = name;
@@ -178,6 +240,11 @@ public class Customer implements java.io.Serializable
       this.personal = personal;
       this.strategic = strategic;
       this.corporate = corporate;
+      this.loanamount = loanamount;
+      this.durationofloan = durationofloan;
+      this.reasonforloan = reasonforloan;
+      this.interestrate = interestrate;
+      this.remarks = remarks;
    }
 
 }
