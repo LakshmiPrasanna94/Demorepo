@@ -34,8 +34,6 @@ public class Customer implements java.io.Serializable
 
    private java.lang.Boolean approve;
 
-   private boolean cancel;
-
    private java.lang.Boolean rework;
 
    private java.lang.Boolean reject;
@@ -43,6 +41,8 @@ public class Customer implements java.io.Serializable
    private java.lang.Boolean other1;
 
    private java.lang.Boolean other2;
+
+   private java.lang.Boolean cancel;
 
    public Customer()
    {
@@ -228,16 +228,6 @@ public class Customer implements java.io.Serializable
       this.approve = approve;
    }
 
-   public boolean isCancel()
-   {
-      return this.cancel;
-   }
-
-   public void setCancel(boolean cancel)
-   {
-      this.cancel = cancel;
-   }
-
    public java.lang.Boolean getRework()
    {
       return this.rework;
@@ -278,6 +268,16 @@ public class Customer implements java.io.Serializable
       this.other2 = other2;
    }
 
+   public java.lang.Boolean getCancel()
+   {
+      return this.cancel;
+   }
+
+   public void setCancel(java.lang.Boolean cancel)
+   {
+      this.cancel = cancel;
+   }
+
    public Customer(java.lang.Integer id, java.lang.String name,
          java.lang.Integer age, java.lang.String address,
          java.lang.Integer mobilenum, java.lang.Boolean female,
@@ -286,9 +286,10 @@ public class Customer implements java.io.Serializable
          java.lang.Boolean strategic, java.lang.Boolean corporate,
          java.lang.Integer loanamount, java.lang.Integer durationofloan,
          java.lang.String reasonforloan, java.lang.Integer interestrate,
-         java.lang.String remarks, java.lang.Boolean approve, boolean cancel,
+         java.lang.String remarks, java.lang.Boolean approve,
          java.lang.Boolean rework, java.lang.Boolean reject,
-         java.lang.Boolean other1, java.lang.Boolean other2)
+         java.lang.Boolean other1, java.lang.Boolean other2,
+         java.lang.Boolean cancel)
    {
       this.id = id;
       this.name = name;
@@ -308,11 +309,11 @@ public class Customer implements java.io.Serializable
       this.interestrate = interestrate;
       this.remarks = remarks;
       this.approve = approve;
-      this.cancel = cancel;
       this.rework = rework;
       this.reject = reject;
       this.other1 = other1;
       this.other2 = other2;
+      this.cancel = cancel;
    }
 
 }
