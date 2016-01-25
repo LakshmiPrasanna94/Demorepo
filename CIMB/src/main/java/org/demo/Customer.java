@@ -9,26 +9,17 @@ public class Customer implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   private java.lang.Integer custId;
-   private java.lang.String name;
+   private java.lang.String custName;
    private java.lang.Integer age;
    private java.lang.Integer mobilenum;
    private java.lang.Boolean female;
    private java.lang.Boolean male;
    private java.lang.String address;
 
+   private java.lang.Integer custId;
+
    public Customer()
    {
-   }
-
-   public java.lang.String getName()
-   {
-      return this.name;
-   }
-
-   public void setName(java.lang.String name)
-   {
-      this.name = name;
    }
 
    public java.lang.Integer getAge()
@@ -91,18 +82,28 @@ public class Customer implements java.io.Serializable
       this.custId = custId;
    }
 
-   public Customer(java.lang.Integer custId, java.lang.String name,
-         java.lang.Integer age, java.lang.Integer mobilenum,
-         java.lang.Boolean female, java.lang.Boolean male,
-         java.lang.String address)
+   public java.lang.String getCustName()
    {
-      this.custId = custId;
-      this.name = name;
+      return this.custName;
+   }
+
+   public void setCustName(java.lang.String custName)
+   {
+      this.custName = custName;
+   }
+
+   public Customer(java.lang.String custName, java.lang.Integer age,
+         java.lang.Integer mobilenum, java.lang.Boolean female,
+         java.lang.Boolean male, java.lang.String address,
+         java.lang.Integer custId)
+   {
+      this.custName = custName;
       this.age = age;
       this.mobilenum = mobilenum;
       this.female = female;
       this.male = male;
       this.address = address;
+      this.custId = custId;
    }
 
 }
