@@ -9,7 +9,7 @@ public class Customer implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   private java.lang.Integer id;
+   private java.lang.Integer custId;
    private java.lang.String name;
    private java.lang.Integer age;
    private java.lang.Integer mobilenum;
@@ -19,16 +19,6 @@ public class Customer implements java.io.Serializable
 
    public Customer()
    {
-   }
-
-   public java.lang.Integer getId()
-   {
-      return this.id;
-   }
-
-   public void setId(java.lang.Integer id)
-   {
-      this.id = id;
    }
 
    public java.lang.String getName()
@@ -91,12 +81,22 @@ public class Customer implements java.io.Serializable
       this.address = address;
    }
 
-   public Customer(java.lang.Integer id, java.lang.String name,
+   public java.lang.Integer getCustId()
+   {
+      return this.custId;
+   }
+
+   public void setCustId(java.lang.Integer custId)
+   {
+      this.custId = custId;
+   }
+
+   public Customer(java.lang.Integer custId, java.lang.String name,
          java.lang.Integer age, java.lang.Integer mobilenum,
          java.lang.Boolean female, java.lang.Boolean male,
          java.lang.String address)
    {
-      this.id = id;
+      this.custId = custId;
       this.name = name;
       this.age = age;
       this.mobilenum = mobilenum;
