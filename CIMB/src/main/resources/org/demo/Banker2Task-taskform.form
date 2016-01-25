@@ -3,47 +3,26 @@
 <property name="name" value="Banker2Task-taskform.form"/>
 <property name="displayMode" value="default"/>
 <property name="status" value="0"/>
-<field position="13" name="loanDetails_rate" type="InputTextFloat" id="1877531530">
+<field position="0" name="buttons_approve" type="CheckBox" id="857582451">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;rate (loanDetails)quot;"/>
+<property name="label" value="quot;enquot;,quot;approve (buttons)quot;"/>
 <property name="readonly" value="false"/>
-<property name="inputBinding" value="in_loanDetails/rate"/>
-<property name="fieldClass" value="java.lang.Float"/>
-</field>
-<field position="22" name="requestType_other" type="CheckBox" id="100427787">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;other (requestType)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value="in_requestType/other"/>
+<property name="outputBinding" value="out_buttons/approve"/>
 <property name="fieldClass" value="java.lang.Boolean"/>
 </field>
-<field position="21" name="requestType_newloan" type="CheckBox" id="191386260">
+<field position="1" name="buttons_cancel" type="CheckBox" id="319791578">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;newloan (requestType)quot;"/>
+<property name="label" value="quot;enquot;,quot;cancel (buttons)quot;"/>
 <property name="readonly" value="false"/>
-<property name="inputBinding" value="in_requestType/newloan"/>
+<property name="outputBinding" value="out_buttons/cancel"/>
 <property name="fieldClass" value="java.lang.Boolean"/>
 </field>
-<field position="18" name="loanType_personal" type="CheckBox" id="1524719328">
+<field position="2" name="buttons_reject" type="CheckBox" id="794633454">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;personal (loanType)quot;"/>
+<property name="label" value="quot;enquot;,quot;reject (buttons)quot;"/>
 <property name="readonly" value="false"/>
-<property name="inputBinding" value="in_loanType/personal"/>
+<property name="outputBinding" value="out_buttons/reject"/>
 <property name="fieldClass" value="java.lang.Boolean"/>
-</field>
-<field position="11" name="loanDetails_amount" type="InputTextInteger" id="146647104">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;amount (loanDetails)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value="in_loanDetails/amount"/>
-<property name="fieldClass" value="java.lang.Integer"/>
-</field>
-<field position="9" name="customer_mobilenum" type="InputTextInteger" id="1856839194">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;mobilenum (customer)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value="in_customer/mobilenum"/>
-<property name="fieldClass" value="java.lang.Integer"/>
 </field>
 <field position="3" name="buttons_rework" type="CheckBox" id="1808207186">
 <property name="fieldRequired" value="false"/>
@@ -59,12 +38,26 @@
 <property name="inputBinding" value="in_customer/address"/>
 <property name="fieldClass" value="java.lang.String"/>
 </field>
+<field position="5" name="customer_age" type="InputTextInteger" id="2056749183">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;age (customer)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="in_customer/age"/>
+<property name="fieldClass" value="java.lang.Integer"/>
+</field>
 <field position="6" name="customer_female" type="CheckBox" id="1344175874">
 <property name="fieldRequired" value="false"/>
 <property name="label" value="quot;enquot;,quot;female (customer)quot;"/>
 <property name="readonly" value="false"/>
 <property name="inputBinding" value="in_customer/female"/>
 <property name="fieldClass" value="java.lang.Boolean"/>
+</field>
+<field position="7" name="customer_id" type="InputTextInteger" id="2092598407">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;id (customer)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="in_customer/id"/>
+<property name="fieldClass" value="java.lang.Integer"/>
 </field>
 <field position="8" name="customer_male" type="CheckBox" id="1857007819">
 <property name="fieldRequired" value="false"/>
@@ -73,12 +66,26 @@
 <property name="inputBinding" value="in_customer/male"/>
 <property name="fieldClass" value="java.lang.Boolean"/>
 </field>
-<field position="15" name="loanDetails_remarks" type="InputText" id="749055187">
+<field position="9" name="customer_mobilenum" type="InputTextInteger" id="1856839194">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;remarks (loanDetails)quot;"/>
+<property name="label" value="quot;enquot;,quot;mobilenum (customer)quot;"/>
 <property name="readonly" value="false"/>
-<property name="inputBinding" value="in_loanDetails/remarks"/>
+<property name="inputBinding" value="in_customer/mobilenum"/>
+<property name="fieldClass" value="java.lang.Integer"/>
+</field>
+<field position="10" name="customer_name" type="InputText" id="1966515159">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;name (customer)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="in_customer/name"/>
 <property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="11" name="loanDetails_amount" type="InputTextInteger" id="146647104">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;amount (loanDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="in_loanDetails/amount"/>
+<property name="fieldClass" value="java.lang.Integer"/>
 </field>
 <field position="12" name="loanDetails_duration" type="InputTextInteger" id="353492105">
 <property name="fieldRequired" value="false"/>
@@ -87,11 +94,32 @@
 <property name="inputBinding" value="in_loanDetails/duration"/>
 <property name="fieldClass" value="java.lang.Integer"/>
 </field>
-<field position="19" name="loanType_strategic" type="CheckBox" id="1146710088">
+<field position="13" name="loanDetails_rate" type="InputTextFloat" id="1877531530">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;strategic (loanType)quot;"/>
+<property name="label" value="quot;enquot;,quot;rate (loanDetails)quot;"/>
 <property name="readonly" value="false"/>
-<property name="inputBinding" value="in_loanType/strategic"/>
+<property name="inputBinding" value="in_loanDetails/rate"/>
+<property name="fieldClass" value="java.lang.Float"/>
+</field>
+<field position="14" name="loanDetails_reason" type="InputText" id="266671841">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;reason (loanDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="in_loanDetails/reason"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="15" name="loanDetails_remarks" type="InputText" id="749055187">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;remarks (loanDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="in_loanDetails/remarks"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="16" name="loanType_corporate" type="CheckBox" id="439850931">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;corporate (loanType)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="in_loanType/corporate"/>
 <property name="fieldClass" value="java.lang.Boolean"/>
 </field>
 <field position="17" name="loanType_other" type="CheckBox" id="1303674215">
@@ -101,32 +129,18 @@
 <property name="inputBinding" value="in_loanType/other"/>
 <property name="fieldClass" value="java.lang.Boolean"/>
 </field>
-<field position="1" name="buttons_cancel" type="CheckBox" id="319791578">
+<field position="18" name="loanType_personal" type="CheckBox" id="1524719328">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;cancel (buttons)quot;"/>
+<property name="label" value="quot;enquot;,quot;personal (loanType)quot;"/>
 <property name="readonly" value="false"/>
-<property name="outputBinding" value="out_buttons/cancel"/>
+<property name="inputBinding" value="in_loanType/personal"/>
 <property name="fieldClass" value="java.lang.Boolean"/>
 </field>
-<field position="0" name="buttons_approve" type="CheckBox" id="857582451">
+<field position="19" name="loanType_strategic" type="CheckBox" id="1146710088">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;approve (buttons)quot;"/>
+<property name="label" value="quot;enquot;,quot;strategic (loanType)quot;"/>
 <property name="readonly" value="false"/>
-<property name="outputBinding" value="out_buttons/approve"/>
-<property name="fieldClass" value="java.lang.Boolean"/>
-</field>
-<field position="2" name="buttons_reject" type="CheckBox" id="794633454">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;reject (buttons)quot;"/>
-<property name="readonly" value="false"/>
-<property name="outputBinding" value="out_buttons/reject"/>
-<property name="fieldClass" value="java.lang.Boolean"/>
-</field>
-<field position="16" name="loanType_corporate" type="CheckBox" id="439850931">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;corporate (loanType)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value="in_loanType/corporate"/>
+<property name="inputBinding" value="in_loanType/strategic"/>
 <property name="fieldClass" value="java.lang.Boolean"/>
 </field>
 <field position="20" name="requestType_existingloan" type="CheckBox" id="1429457484">
@@ -136,33 +150,19 @@
 <property name="inputBinding" value="in_requestType/existingloan"/>
 <property name="fieldClass" value="java.lang.Boolean"/>
 </field>
-<field position="5" name="customer_age" type="InputTextInteger" id="2056749183">
+<field position="21" name="requestType_newloan" type="CheckBox" id="191386260">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;age (customer)quot;"/>
+<property name="label" value="quot;enquot;,quot;newloan (requestType)quot;"/>
 <property name="readonly" value="false"/>
-<property name="inputBinding" value="in_customer/age"/>
-<property name="fieldClass" value="java.lang.Integer"/>
+<property name="inputBinding" value="in_requestType/newloan"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
 </field>
-<field position="14" name="loanDetails_reason" type="InputText" id="266671841">
+<field position="22" name="requestType_other" type="CheckBox" id="100427787">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;reason (loanDetails)quot;"/>
+<property name="label" value="quot;enquot;,quot;other (requestType)quot;"/>
 <property name="readonly" value="false"/>
-<property name="inputBinding" value="in_loanDetails/reason"/>
-<property name="fieldClass" value="java.lang.String"/>
-</field>
-<field position="7" name="customer_id" type="InputTextInteger" id="2092598407">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;id (customer)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value="in_customer/id"/>
-<property name="fieldClass" value="java.lang.Integer"/>
-</field>
-<field position="10" name="customer_name" type="InputText" id="1966515159">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;name (customer)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value="in_customer/name"/>
-<property name="fieldClass" value="java.lang.String"/>
+<property name="inputBinding" value="in_requestType/other"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
 </field>
 <dataHolder inputId="" name="#9BCAFA" type="dataModelerEntry" outId="out_buttons" value="org.demo.Buttons" id="buttons"/>
 <dataHolder inputId="in_customer" name="#0000A0" type="dataModelerEntry" outId="" value="org.demo.Customer" id="customer"/>
