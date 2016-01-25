@@ -1,9 +1,9 @@
 package org.demo;
-import org.demo.Customer;
+import org.demo.RequestType;
 rule "set as newloan" ruleflow-group "RequestTypeRule"
 no-loop
 when
-	 $p:Customer(newloan==true)
+	 $p:RequestType(newloan==true)
 then
 	modify($p){
 		setNewloan(true);
@@ -13,17 +13,17 @@ then
 rule "set as existingloan" ruleflow-group "RequestTypeRule"
 no-loop
 when
-	 $p:Customer(existingloan==true)
+	 $p:RequestType(existingloan==true)
 then
 	modify($p){
 		setExistingloan(true);
 			}
  end
 
-rule "set as other1" ruleflow-group "RequestTypeRule"
+rule "set as other" ruleflow-group "RequestTypeRule"
 no-loop
 when
-	 $p:Customer(other1==true)
+	 $p:RequestType(other==true)
 then
 	modify($p){
 		setOther1(true);
