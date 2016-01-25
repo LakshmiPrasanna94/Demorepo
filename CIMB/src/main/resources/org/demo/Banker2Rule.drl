@@ -3,7 +3,7 @@ import org.demo.Customer;
 rule "set as approve" ruleflow-group "Banker2Rule"
 no-loop
 when
-	 $b:Customer(approve==true)
+	 $b:Buttons(approve==true)
 then
 	modify($b){
 		setApprove(true);
@@ -13,7 +13,7 @@ then
 rule "set as reject" ruleflow-group "Banker2Rule"
 no-loop
 when
-	 $b:Customer(reject==true)
+	 $b:Buttons(reject==true)
 then
 	modify($b){
 		setReject(true);
@@ -23,7 +23,7 @@ then
 rule "set as rework" ruleflow-group "Banker2Rule"
 no-loop
 when
-	 $b:Customer(rework==true)
+	 $b:Buttons(rework==true)
 then
 	modify($b){
 		setRework(true);
@@ -33,7 +33,7 @@ then
 rule "set as cancel" ruleflow-group "Banker2Rule"
 no-loop
 when
-	 $b:Customer(cancel==true)
+	 $b:Buttons(cancel==true)
 then
 	modify($b){
 		setCancel(true);
