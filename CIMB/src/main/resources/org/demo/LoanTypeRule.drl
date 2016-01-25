@@ -3,7 +3,7 @@ import org.demo.NewLoan;
 rule "set as personal" ruleflow-group "LoanTypeRule"
 no-loop
 when
-	 $p:LoanType(personal==true)
+	 $p:NewLoan(personal==true)
 then
 	modify($p){
 		setPersonal(true);
@@ -13,7 +13,7 @@ then
 rule "set as strategic" ruleflow-group "LoanTypeRule"
 no-loop
 when
-	 $p:LoanType(strategic==true)
+	 $p:NewLoan(strategic==true)
 then
 	modify($p){
 		setStrategic(true);
@@ -23,7 +23,7 @@ then
 rule "set as corporate" ruleflow-group "LoanTypeRule"
 no-loop
 when
-	 $p:LoanType(corporate==true)
+	 $p:NewLoan(corporate==true)
 then
 	modify($p){
 		setCorporate(true);
@@ -32,7 +32,7 @@ then
 rule "set as other" ruleflow-group "LoanTypeRule"
 no-loop
 when
-	 $p:LoanType(other==true)
+	 $p:NewLoan(other==true)
 then
 	modify($p){
 		setOther(true);
