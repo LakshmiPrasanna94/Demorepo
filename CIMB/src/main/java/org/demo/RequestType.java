@@ -9,32 +9,34 @@ public class RequestType implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   private java.lang.Boolean newloan;
-   private java.lang.Boolean existingloan;
+   private java.lang.Boolean newLoan;
+
+   private java.lang.Boolean existingLoan;
+
    private java.lang.Boolean other;
 
    public RequestType()
    {
    }
 
-   public java.lang.Boolean getNewloan()
+   public java.lang.Boolean getNewLoan()
    {
-      return this.newloan;
+      return this.newLoan;
    }
 
-   public void setNewloan(java.lang.Boolean newloan)
+   public void setNewLoan(java.lang.Boolean newLoan)
    {
-      this.newloan = newloan;
+      this.newLoan = newLoan;
    }
 
-   public java.lang.Boolean getExistingloan()
+   public java.lang.Boolean getExistingLoan()
    {
-      return this.existingloan;
+      return this.existingLoan;
    }
 
-   public void setExistingloan(java.lang.Boolean existingloan)
+   public void setExistingLoan(java.lang.Boolean existingLoan)
    {
-      this.existingloan = existingloan;
+      this.existingLoan = existingLoan;
    }
 
    public java.lang.Boolean getOther()
@@ -47,11 +49,11 @@ public class RequestType implements java.io.Serializable
       this.other = other;
    }
 
-   public RequestType(java.lang.Boolean newloan,
-         java.lang.Boolean existingloan, java.lang.Boolean other)
+   public RequestType(java.lang.Boolean newLoan, java.lang.Boolean existingLoan,
+         java.lang.Boolean other)
    {
-      this.newloan = newloan;
-      this.existingloan = existingloan;
+      this.newLoan = newLoan;
+      this.existingLoan = existingLoan;
       this.other = other;
    }
 
