@@ -32,7 +32,7 @@ then
 rule "set as other" ruleflow-group "LoanTypeRule"
 no-loop
 when
-	 $p:NewLoanorg.demo.LoanType( )(other==true)
+	 $p:NewLoan(other==true)
 then
 	modify($p){
 		setOther(true);
