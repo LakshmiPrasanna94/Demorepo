@@ -1,8 +1,25 @@
 
 <form id="385634338">
 <property name="name" value="Cancel-taskform.form"/>
-<property name="displayMode" value="default"/>
+<property name="displayMode" value="aligned"/>
+<property name="labelMode" value="left"/>
 <property name="status" value="0"/>
+<field position="0" name="customer_address" type="InputText" id="69464217">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;address (customer)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="in_customer/address"/>
+<property name="outputBinding" value="out_customer/address"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="1" name="customer_age" type="InputTextInteger" id="354283338">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;age (customer)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="in_customer/age"/>
+<property name="outputBinding" value="out_customer/age"/>
+<property name="fieldClass" value="java.lang.Integer"/>
+</field>
 <field position="2" name="customer_custId" type="InputTextInteger" id="1402547678">
 <property name="fieldRequired" value="false"/>
 <property name="label" value="quot;enquot;,quot;custId (customer)quot;"/>
@@ -19,21 +36,13 @@
 <property name="outputBinding" value="out_customer/custName"/>
 <property name="fieldClass" value="java.lang.String"/>
 </field>
-<field position="1" name="customer_age" type="InputTextInteger" id="354283338">
+<field position="4" name="customer_female" type="CheckBox" id="2026897528">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;age (customer)quot;"/>
+<property name="label" value="quot;enquot;,quot;female (customer)quot;"/>
 <property name="readonly" value="false"/>
-<property name="inputBinding" value="in_customer/age"/>
-<property name="outputBinding" value="out_customer/age"/>
-<property name="fieldClass" value="java.lang.Integer"/>
-</field>
-<field position="6" name="customer_mobilenum" type="InputTextInteger" id="853814850">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;mobilenum (customer)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value="in_customer/mobilenum"/>
-<property name="outputBinding" value="out_customer/mobilenum"/>
-<property name="fieldClass" value="java.lang.Integer"/>
+<property name="inputBinding" value="in_customer/female"/>
+<property name="outputBinding" value="out_customer/female"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
 </field>
 <field position="5" name="customer_male" type="CheckBox" id="787006155">
 <property name="fieldRequired" value="false"/>
@@ -43,21 +52,13 @@
 <property name="outputBinding" value="out_customer/male"/>
 <property name="fieldClass" value="java.lang.Boolean"/>
 </field>
-<field position="4" name="customer_female" type="CheckBox" id="2026897528">
+<field position="6" name="customer_mobilenum" type="InputTextInteger" id="853814850">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;female (customer)quot;"/>
+<property name="label" value="quot;enquot;,quot;mobilenum (customer)quot;"/>
 <property name="readonly" value="false"/>
-<property name="inputBinding" value="in_customer/female"/>
-<property name="outputBinding" value="out_customer/female"/>
-<property name="fieldClass" value="java.lang.Boolean"/>
-</field>
-<field position="0" name="customer_address" type="InputText" id="69464217">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;address (customer)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value="in_customer/address"/>
-<property name="outputBinding" value="out_customer/address"/>
-<property name="fieldClass" value="java.lang.String"/>
+<property name="inputBinding" value="in_customer/mobilenum"/>
+<property name="outputBinding" value="out_customer/mobilenum"/>
+<property name="fieldClass" value="java.lang.Integer"/>
 </field>
 <dataHolder inputId="in_customer" name="#0000A0" type="dataModelerEntry" outId="out_customer" value="org.demo.Customer" id="customer"/>
 </form>
